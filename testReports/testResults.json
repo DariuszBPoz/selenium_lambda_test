@@ -1,0 +1,276 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-29T07:54:07.531Z",
+    "end": "2024-01-29T07:54:49.723Z",
+    "duration": 42192,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3f2936d7-2dff-4995-b631-49cf405a1654",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "00df65e1-f065-48f0-84c2-9da25cb776b3",
+          "title": "Add todo tests",
+          "fullFile": "C:\\Users\\User\\hello-world\\Selenium\\Selenium_tests\\test\\firstTest.js",
+          "file": "\\test\\firstTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "succesfully adds a todo to application",
+              "fullTitle": "Add todo tests succesfully adds a todo to application",
+              "timedOut": null,
+              "duration": 2627,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// launch the browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n// navigate to the website\nawait driver.get(\"http://lambdatest.github.io/sample-todo-app\");\n//add a todo\nawait driver\n  .findElement(By.id(\"sampletodotext\"))\n  .sendKeys(\"Learn Selenium\", Key.RETURN);\n//assert\nlet todoText = await driver\n  .findElement(By.xpath(\"//li[last()]\"))\n  .getText()\n  .then(function (value) {\n    return value;\n  });\n//assert using chai should\ntodoText.should.equal(\"Learn Selenium\");\n//close the browser\nawait driver.quit();",
+              "err": {},
+              "uuid": "c48b1459-8b30-4e94-9f74-46dbbe59051b",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c48b1459-8b30-4e94-9f74-46dbbe59051b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2627,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "503c241e-6b18-4509-824d-17ea3d267dde",
+          "title": "Add another todo tests",
+          "fullFile": "C:\\Users\\User\\hello-world\\Selenium\\Selenium_tests\\test\\secondTest.js",
+          "file": "\\test\\secondTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Add another todo tests\"",
+              "fullTitle": "Add another todo tests \"before each\" hook in \"Add another todo tests\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "ltCapabilities.capabilities[\"LT:Options\"].name = this.currentTest.title;\ndriver = new Builder()\n.usingServer(gridUrl)\n.withCapabilities(ltCapabilities.capabilities)\n.build();",
+              "err": {},
+              "uuid": "8a3d8eef-0b6f-4dc8-bd09-afdb64d9b044",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Add another todo tests\"",
+              "fullTitle": "Add another todo tests \"after each\" hook in \"Add another todo tests\"",
+              "timedOut": null,
+              "duration": 166,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "33f0f14b-fdd6-4654-a1a8-45c9d683621a",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "succesfully adds another todo to application",
+              "fullTitle": "Add another todo tests succesfully adds another todo to application",
+              "timedOut": null,
+              "duration": 5502,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// launch the browser\n// let driver = await new Builder().forBrowser(\"chrome\").build();\n// navigate to the website\nawait driver.get(\"http://lambdatest.github.io/sample-todo-app\");\n//add a todo\nawait driver\n  .findElement(By.id(\"sampletodotext\"))\n  .sendKeys(\"Learn Selenium\", Key.RETURN);\n//assert\nlet todoText = await driver\n  .findElement(By.xpath(\"//li[last()]\"))\n  .getText()\n  .then(function (value) {\n    return value;\n  });\n//assert using chai should\ntodoText.should.equal(\"Learn Selenium\");",
+              "err": {},
+              "uuid": "bd4ea7a2-73fc-4269-84d6-acc9884992e4",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adding a new test for reporting",
+              "fullTitle": "Add another todo tests Adding a new test for reporting",
+              "timedOut": null,
+              "duration": 13803,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// launch the browser\n// let driver = await new Builder().forBrowser(\"chrome\").build();\n// navigate to the website\nawait driver.get(\"http://lambdatest.github.io/sample-todo-app\");\n//add a todo\nawait driver\n  .findElement(By.id(\"sampletodotext\"))\n  .sendKeys(\"Learn JavaScript\", Key.RETURN);\n//assert\nlet todoText = await driver\n  .findElement(By.xpath(\"//li[last()]\"))\n  .getText()\n  .then(function (value) {\n    return value;\n  });\n//assert using chai should\ntodoText.should.equal(\"Learn JavaScript\");",
+              "err": {},
+              "uuid": "38d0ffbb-d8b9-422b-9a85-b8bfa609208e",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bd4ea7a2-73fc-4269-84d6-acc9884992e4",
+            "38d0ffbb-d8b9-422b-9a85-b8bfa609208e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19305,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "dd306264-4a4b-40a8-84b8-b63787ef5dfa",
+          "title": "Add another todo tests",
+          "fullFile": "C:\\Users\\User\\hello-world\\Selenium\\Selenium_tests\\test\\paramTest.js",
+          "file": "\\test\\paramTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "succesfully adds a todo for browser Chrome, 121.0, Windows 11",
+              "fullTitle": "Add another todo tests succesfully adds a todo for browser Chrome, 121.0, Windows 11",
+              "timedOut": null,
+              "duration": 7215,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "ltCapabilities.capabilities[\"LT:Options\"].platformName = os;\nltCapabilities.capabilities.browserName = browser;\nltCapabilities.capabilities.browserVersion = bVersion;\nltCapabilities.capabilities[\"LT:Options\"].name = this.test.title;\ndriver = new Builder()\n  .usingServer(gridUrl)\n  .withCapabilities(ltCapabilities.capabilities)\n  .build();\n//navigate to our website\nawait driver.get(todoEndPoint);\n//add a todo\nawait driver\n  .findElement(By.id(\"sampletodotext\"))\n  .sendKeys(\"Learn Selenium\", Key.RETURN);\n//assert\nlet todoText = await driver\n  .findElement(By.xpath(\"//li[last()]\"))\n  .getText()\n  .then(function (value) {\n    return value;\n  });\n//assert using chai should\ntodoText.should.equal(\"Learn Selenium\");\nawait driver.quit();",
+              "err": {},
+              "uuid": "56ec752f-aaf1-4dc8-a349-31e7acf31f91",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "succesfully adds a todo for browser Firefox, 121.0, Windows 11",
+              "fullTitle": "Add another todo tests succesfully adds a todo for browser Firefox, 121.0, Windows 11",
+              "timedOut": null,
+              "duration": 22580,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "ltCapabilities.capabilities[\"LT:Options\"].platformName = os;\nltCapabilities.capabilities.browserName = browser;\nltCapabilities.capabilities.browserVersion = bVersion;\nltCapabilities.capabilities[\"LT:Options\"].name = this.test.title;\ndriver = new Builder()\n  .usingServer(gridUrl)\n  .withCapabilities(ltCapabilities.capabilities)\n  .build();\n//navigate to our website\nawait driver.get(todoEndPoint);\n//add a todo\nawait driver\n  .findElement(By.id(\"sampletodotext\"))\n  .sendKeys(\"Learn Selenium\", Key.RETURN);\n//assert\nlet todoText = await driver\n  .findElement(By.xpath(\"//li[last()]\"))\n  .getText()\n  .then(function (value) {\n    return value;\n  });\n//assert using chai should\ntodoText.should.equal(\"Learn Selenium\");\nawait driver.quit();",
+              "err": {},
+              "uuid": "1604f581-1b95-4739-85e4-152fccee45e8",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "succesfully adds a todo for browser Firefox, 120.0, Windows 11",
+              "fullTitle": "Add another todo tests succesfully adds a todo for browser Firefox, 120.0, Windows 11",
+              "timedOut": null,
+              "duration": 11960,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "ltCapabilities.capabilities[\"LT:Options\"].platformName = os;\nltCapabilities.capabilities.browserName = browser;\nltCapabilities.capabilities.browserVersion = bVersion;\nltCapabilities.capabilities[\"LT:Options\"].name = this.test.title;\ndriver = new Builder()\n  .usingServer(gridUrl)\n  .withCapabilities(ltCapabilities.capabilities)\n  .build();\n//navigate to our website\nawait driver.get(todoEndPoint);\n//add a todo\nawait driver\n  .findElement(By.id(\"sampletodotext\"))\n  .sendKeys(\"Learn Selenium\", Key.RETURN);\n//assert\nlet todoText = await driver\n  .findElement(By.xpath(\"//li[last()]\"))\n  .getText()\n  .then(function (value) {\n    return value;\n  });\n//assert using chai should\ntodoText.should.equal(\"Learn Selenium\");\nawait driver.quit();",
+              "err": {},
+              "uuid": "e71387be-9a8a-42f6-8121-76ea03c0a9fd",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "56ec752f-aaf1-4dc8-a349-31e7acf31f91",
+            "1604f581-1b95-4739-85e4-152fccee45e8",
+            "e71387be-9a8a-42f6-8121-76ea03c0a9fd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41755,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "testResults",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "C:/Users/User/hello-world/Selenium/Selenium_tests/testReports",
+        "reportFilename": "testResults"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
